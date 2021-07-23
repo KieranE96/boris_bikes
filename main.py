@@ -35,7 +35,7 @@ p = gmap(GOOGLE_API_KEY, map_options, title=title, height=800, width=1200,
 p.axis.visible = False
 source = ColumnDataSource(data=df)
 
-p.circle(x="longitude", y="latitude", size=15, fill_alpha=0, line_alpha=0, source=source)
+p.circle(x="longitude", y="latitude", size=15, fill_alpha=0, line_alpha=0, source=source) #for the tooltips
 p.image_url(url="url", x="longitude", y="latitude", w="width", h="height", source=source, anchor="center")
 p.add_tools(HoverTool(tooltips=TOOLTIPS))
 
